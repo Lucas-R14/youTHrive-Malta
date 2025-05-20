@@ -1,0 +1,370 @@
+/* youTHrive Malta - Main Stylesheet */
+
+:root {
+  /* Color palette */
+  --science-blue: #0574dc;
+  --ecstasy: #fc851f;
+  --geyser: #d6dfe7;
+  --picton-blue: #54a1e5;
+  --chardonnay: #fcc48c;
+  --atomic-tangerine: #ff9854;
+  
+  /* Text colors */
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  
+  /* Common measurements */
+  --section-padding: 60px 0;
+  --container-padding: 0 15px;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--science-blue);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--ecstasy);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--science-blue);
+  color: var(--text-light);
+  border: 2px solid var(--science-blue);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--science-blue);
+}
+
+.btn-secondary {
+  background-color: var(--ecstasy);
+  color: var(--text-light);
+  border: 2px solid var(--ecstasy);
+}
+
+.btn-secondary:hover {
+  background-color: transparent;
+  color: var(--ecstasy);
+}
+
+/* Header Styles */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-left: 30px;
+}
+
+.nav-menu li a {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.nav-menu li a:hover {
+  color: var(--science-blue);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(5, 116, 220, 0.8), rgba(252, 133, 31, 0.8)), var(--science-blue);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+  position: relative;
+  padding-top: 80px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Mission Section */
+.mission {
+  padding: var(--section-padding);
+  background-color: var(--geyser);
+}
+
+.mission-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission h2 {
+  color: var(--science-blue);
+}
+
+/* Quick Links Section */
+.quick-links {
+  padding: var(--section-padding);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.quick-link-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.quick-link-card:hover {
+  transform: translateY(-10px);
+}
+
+.quick-link-image {
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--picton-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+}
+
+.quick-link-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.quick-link-card:hover .quick-link-image img {
+  transform: scale(1.1);
+}
+
+.quick-link-content {
+  padding: 20px;
+}
+
+.quick-link-content h3 {
+  color: var(--science-blue);
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: var(--text-light);
+  padding: 50px 0 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.footer-links h4 {
+  color: var(--ecstasy);
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: var(--text-light);
+}
+
+.footer-links a:hover {
+  color: var(--ecstasy);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: var(--text-light);
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--ecstasy);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: var(--science-blue);
+  color: white;
+  padding: 60px 0;
+}
+
+.cta-content {
+  text-align: center;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .header-container {
+    padding: 15px;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    transition: left 0.3s ease;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .nav-menu li {
+    margin: 15px 0;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+  }
+} 

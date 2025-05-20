@@ -1,0 +1,8 @@
+CSS
+/* CSS HEX */
+ --science-blue: #0574dc;
+--ecstasy: #fc851f;
+--geyser: #d6dfe7;
+--picton-blue: #54a1e5;
+--chardonnay: #fcc48c;
+--atomic-tangerine: #ff9854;
