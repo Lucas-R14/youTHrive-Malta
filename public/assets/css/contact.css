@@ -40,16 +40,6 @@
     font-weight: 300;
 }
 
-.hero-wave {
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    z-index: 1;
-}
-
 /* Contact Section */
 .contact-section {
     padding: 100px 0;
