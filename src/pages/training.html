@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training & Resources - youTHrive Malta</title>
+    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link rel="stylesheet" href="../../public/assets/css/home.css">
+    <link rel="stylesheet" href="../../public/assets/css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <section class="projects-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Training & Resources</h2>
+                    <p>Empowering people and organizations through innovative, inclusive, and practical learning opportunities.</p>
+                </div>
+                <div class="quick-links-grid">
+                    <!-- Training Opportunities -->
+                    <div class="quick-link-card">
+                        <div class="quick-link-image">
+                            <i class="fas fa-chalkboard-teacher" style="font-size: 3rem; color: #ffffff;"></i>
+                        </div>
+                        <div class="quick-link-content">
+                            <h3>Training Opportunities</h3>
+                            <p>
+                                We offer a variety of upcoming and on-demand training sessions for adult learners, VET, and secondary education. Our programs are tailored to meet the needs of diverse backgrounds, with a focus on digital skills, labour market readiness, finance education, and teacher training.
+                            </p>
+                            <ul>
+                                <li>Upcoming workshops and events</li>
+                                <li>Specialized sessions for organizations</li>
+                                <li>Inclusive training for disadvantaged groups</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Custom Training for Organisations -->
+                    <div class="quick-link-card">
+                        <div class="quick-link-image">
+                            <i class="fas fa-building" style="font-size: 3rem; color: #ffffff;"></i>
+                        </div>
+                        <div class="quick-link-content">
+                            <h3>Custom Training for Organisations</h3>
+                            <p>
+                                We design and deliver custom training solutions for organizations, including quality management, leadership, and professional development. Our team, led by experienced evaluators and trainers, ensures impactful and relevant learning experiences.
+                            </p>
+                            <ul>
+                                <li>Quality management & evaluation</li>
+                                <li>Leadership and soft skills</li>
+                                <li>On-site training events in Malta</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Digital Tools & Media -->
+                    <div class="quick-link-card">
+                        <div class="quick-link-image">
+                            <i class="fas fa-photo-film" style="font-size: 3rem; color: #ffffff;"></i>
+                        </div>
+                        <div class="quick-link-content">
+                            <h3>Digital Tools & Media</h3>
+                            <p>
+                                Access a growing library of sample training videos, podcasts, and graphics designed to make learning engaging and accessible. Our resources are available in multiple languages and are created with inclusivity and real-world application in mind.
+                            </p>
+                            <ul>
+                                <li>Sample training videos</li>
+                                <li>Podcasts on key topics</li>
+                                <li>Vibrant graphics and gamified content</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- No MOOCs Note -->
+                    <div class="quick-link-card">
+                        <div class="quick-link-image">
+                            <i class="fas fa-ban" style="font-size: 3rem; color: #ffffff;"></i>
+                        </div>
+                        <div class="quick-link-content">
+                            <h3>No MOOCs</h3>
+                            <p>
+                                Please note: youTHrive does not offer MOOCs (Massive Open Online Courses) as part of our training portfolio, in line with our PIF statement. We focus on interactive, tailored, and high-quality learning experiences.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About our approach -->
+        <section class="mission">
+            <div class="container">
+                <div class="mission-content">
+                    <h2>Our Approach</h2>
+                    <p>
+                        youTHrive Malta is dedicated to empowering people through innovative learning experiences. Our expertise spans digital skills, labour market readiness, finance education, and teacher training. We are committed to inclusivity, working with diverse communities and focusing on real-world impact. Our team includes experienced trainers and quality evaluators, ensuring every program is impactful and relevant.
+                    </p>
+                    <p>
+                        We do not send people overseas for mobilities, but we are open to organizing training events in Malta. Our travel is limited to one person, max three trips per project, and only for up to two nights.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="../assets/js/main.js"></script>
+    <script>
+    fetch('../components/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+    </script>
+</body>
+</html> 
