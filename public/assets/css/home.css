@@ -145,9 +145,21 @@
 
 .quick-links-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin-top: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+    .quick-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .quick-link-card {
