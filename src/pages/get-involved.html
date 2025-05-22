@@ -13,46 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>
-
-        /* Temporary fix for hero section */
-        .about-hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;    
-            padding-top: 140px; /* space for fixed header */
-            padding-bottom: 100px; /* space before footer */
-            background: linear-gradient(180deg, #357abd 0%, #fc851f 100%);
-        }
-        @media (max-width: 768px) {
-            .about-hero {
-                padding-top: 100px;
-                padding-bottom: 40px;
-            }
-        }
-        .enhanced-card {
-            position: relative;
-            overflow: hidden;
-            padding-top: 36px !important;
-        }
-        .card-top-bar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: #0574dc;
-        }
-        .card-icon {
-            font-size: 2.2rem;
-            color: #0574dc;
-            margin-bottom: 18px;
-        }
-        .enhanced-card h3 {
-            margin-top: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="../../public/assets/css/get-involved.css">
 </head>
 <body>
     
@@ -66,13 +27,14 @@
                 <h1>Collaborate with us!</h1>
                 <p class="hero-subtitle">Join our mission to empower youth through education and innovation</p>
                 <div class="hero-description">
-                    <p>We welcome partnerships with:</p>
-                    <ul class="partner-types">
-                        <li><i class="fas fa-chalkboard-teacher"></i> Adult Trainers</li>
-                        <li><i class="fas fa-school"></i> Schools</li>
-                        <li><i class="fas fa-graduation-cap"></i> VET Institutions</li>
-                        <li><i class="fas fa-university"></i> Higher Education Institutions</li>
-                    </ul>
+                    <div class="hero-partners-row">
+                        <ul class="partner-types">
+                            <li></i> Adult Trainers</li>
+                            <li></i> Schools</li>
+                            <li></i> VET Institutions</li>
+                            <li></i> Higher Education Institutions</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="cta-buttons">
                     <a href="get-involved.html" class="btn btn-primary">Apply Now <i class="fas fa-hands-helping"></i></a>
@@ -89,21 +51,18 @@
             <div class="partners-content" data-aos="fade-up" data-aos-delay="100">
                 <div class="partners-grid">
                     <div class="partner-item enhanced-card">
-                        <div class="card-top-bar"></div>
                         <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
                         <h3>Volunteer / Contribute</h3>
                         <p>Share your skills and passion to help empower the next generation.</p>
                         <a href="#volunteer" class="btn btn-secondary">Learn More</a>
                     </div>
                     <div class="partner-item enhanced-card">
-                        <div class="card-top-bar"></div>
                         <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
                         <h3>Host a Training in Malta</h3>
                         <p>Bring your team or project to Malta and benefit from our facilities, expertise, and vibrant local network.</p>
                         <a href="#host-training" class="btn btn-secondary">Contact Us</a>
                     </div>
                     <div class="partner-item enhanced-card">
-                        <div class="card-top-bar"></div>
                         <div class="card-icon"><i class="fas fa-handshake"></i></div>
                         <h3>Partnership Opportunities</h3>
                         <p>Collaborate with us on innovative projects, research, or educational initiatives.</p>
