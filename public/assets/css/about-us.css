@@ -394,4 +394,13 @@
 .read-more-btn:hover, .read-more-btn:focus {
     background: var(--ecstasy);
     color: var(--text-light);
+}
+
+.bio-rest {
+    display: none;
+}
+
+.cta-buttons .btn {
+    background-color: white;
+    color: var(--science-blue);
 } 
