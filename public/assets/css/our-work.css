@@ -1,6 +1,14 @@
 /* youTHrive Malta - Our Work Page Styles */
 
 /* Hero section */
+.page-header {
+    padding: 180px 0 100px;
+    margin-top: 80px;
+    background: linear-gradient(rgba(5, 116, 220, 0.9), rgba(252, 133, 31, 0.8));
+    color: var(--text-light);
+    text-align: center;
+}
+
 .about-hero {
     background: linear-gradient(rgba(5, 116, 220, 0.8), rgba(252, 133, 31, 0.7)), url('../../../public/images/backgrounds/hero-background.jpg'), var(--science-blue);
     background-size: cover;
@@ -40,6 +48,40 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     font-weight: 300;
     text-align: justify;
+}
+
+/* Quick Links Styles */
+.quick-link-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--science-blue);
+}
+
+.quick-link-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-link-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-link-content .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.quick-link-card h3 {
+    color: var(--science-blue);
+    margin-bottom: 15px;
+}
+
+.quick-link-card p {
+    color: #666;
+    margin-bottom: 20px;
 }
 
   
