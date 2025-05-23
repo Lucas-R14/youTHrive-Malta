@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../public/assets/css/style.css">
     <link rel="stylesheet" href="../../public/assets/css/home.css">
     <link rel="stylesheet" href="../../public/assets/css/projects.css">
+    <link rel="stylesheet" href="../../public/assets/css/training.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -23,7 +24,7 @@
                     <!-- Training Opportunities -->
                     <div class="quick-link-card">
                         <div class="quick-link-image">
-                            <i class="fas fa-chalkboard-teacher" style="font-size: 3rem; color: #ffffff;"></i>
+                            <i class="fas fa-chalkboard-teacher"></i>
                         </div>
                         <div class="quick-link-content">
                             <h3>Training Opportunities</h3>
@@ -40,7 +41,7 @@
                     <!-- Custom Training for Organisations -->
                     <div class="quick-link-card">
                         <div class="quick-link-image">
-                            <i class="fas fa-people-group" style="font-size: 3rem; color: #ffffff;"></i>
+                            <i class="fas fa-people-group"></i>
                         </div>
                         <div class="quick-link-content">
                             <h3>Custom Training for Organisations</h3>
@@ -57,7 +58,7 @@
                     <!-- Digital Tools & Media -->
                     <div class="quick-link-card">
                         <div class="quick-link-image">
-                            <i class="fas fa-photo-film" style="font-size: 3rem; color: #ffffff;"></i>
+                            <i class="fas fa-photo-film"></i>
                         </div>
                         <div class="quick-link-content">
                             <h3>Digital Tools & Media</h3>
@@ -74,7 +75,7 @@
                     <!-- No MOOCs Note -->
                     <div class="quick-link-card">
                         <div class="quick-link-image">
-                            <i class="fas fa-ban" style="font-size: 3rem; color: #ffffff;"></i>
+                            <i class="fas fa-ban"></i>
                         </div>
                         <div class="quick-link-content">
                             <h3>No MOOCs</h3>
@@ -103,17 +104,6 @@
     </main>
     <div id="footer-placeholder"></div>
     <script src="../assets/js/main.js"></script>
-    <script>
-    fetch('../components/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-      });
-    fetch('../components/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-      });
-    </script>
+    <script src="../assets/js/training.js"></script>
 </body>
-</html> 
+</html>
