@@ -1,31 +1,21 @@
 /* News & Blog Page Styles */
 
-/* Hero Section */
-.news-hero {
-    background: linear-gradient(rgba(5, 116, 220, 0.8), rgba(252, 133, 31, 0.7)), url('../../../public/images/backgrounds/hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    padding: 100px 0 80px;
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.news-hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.news-hero p {
-    font-size: 1.4rem;
-    max-width: 700px;
+/* Hero Section Text Background */
+.about-hero-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
     margin: 0 auto;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Main Content Container */
@@ -316,86 +306,206 @@
     line-height: 1.6;
 }
 
-/* Newsletter Section */
-.newsletter-section {
+/* CTA Section - Matches home page style */
+.cta-section {
     background: linear-gradient(135deg, var(--science-blue) 0%, var(--picton-blue) 100%);
+    padding: 100px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.cta-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(150px, -150px);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.cta-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.cta-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.cta-buttons .btn i {
+    margin-left: 8px;
+}
+
+/* Responsive adjustments for CTA section */
+@media (max-width: 768px) {
+    .cta-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .cta-content p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Keep old newsletter styles for backward compatibility */
+.newsletter-section {
+    background: linear-gradient(19b5deg, var(--science-blue) 0%, var(--picton-blue) 100%);
     border-radius: 15px;
     padding: 60px;
     color: white;
     text-align: center;
     position: relative;
     overflow: hidden;
+    margin-top: 60px;
 }
 
-.newsletter-section::before {
-    content: '';
+.cta-section {
+    background: linear-gradient(135deg, var(--science-blue) 0%, var(--picton-blue) 100%);
+    padding: 100px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+.cta-section::before {
+    content: "";
     position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.1);
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    transform: translate(150px, -150px);
 }
 
-.newsletter-section::after {
-    content: '';
-    position: absolute;
-    bottom: -30px;
-    left: -30px;
-    width: 150px;
-    height: 150px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-}
-
-.newsletter-content {
+.cta-content {
     position: relative;
     z-index: 1;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
 }
 
-.newsletter-content h3 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+.cta-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
-.newsletter-content p {
+.cta-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.cta-buttons .btn {
+    padding: 15px 35px;
+    border-radius: 50px;
     font-size: 1.1rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
+    margin: 0 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.newsletter-form {
-    display: flex;
-    max-width: 500px;
-    margin: 0 auto;
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .mission h2, .section-title h2, .cta-content h2 {
+        font-size: 2rem;
+    }
 }
 
-.newsletter-form input {
-    flex: 1;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 50px 0 0 50px;
-    font-size: 1rem;
-    outline: none;
-}
-
-.newsletter-form button {
-    padding: 0 30px;
-    border: none;
-    background: var(--ecstasy);
-    color: white;
-    font-weight: 600;
-    border-radius: 0 50px 50px 0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.newsletter-form button:hover {
-    background: #e67700;
-}
+@media screen and (max-width: 480px) {
+    .hero-content {
+        padding: 30px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .cta-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+} 
 
 /* Responsive Styles */
 @media (max-width: 992px) {

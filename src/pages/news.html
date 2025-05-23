@@ -6,6 +6,7 @@
     <title>News & Blog - youTHrive Malta</title>
     <!-- Load CSS -->
     <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link rel="stylesheet" href="../../public/assets/css/our-work.css">
     <link rel="stylesheet" href="../../public/assets/css/news.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -19,9 +20,9 @@
     <div id="header-placeholder"></div>
     
     <!-- Hero Section -->
-    <section class="news-hero">
+    <section class="about-hero">
         <div class="container">
-            <div class="news-hero-content" data-aos="fade-up">
+            <div class="about-hero-content" data-aos="fade-up">
                 <h1>News & Blog</h1>
                 <p>Stay updated with the latest news, articles, and events from youTHrive Malta</p>
             </div>
@@ -145,15 +146,17 @@
                 </div>
             </section>
 
-            <!-- Newsletter Section -->
-            <section class="newsletter-section" data-aos="fade-up" data-aos-delay="300">
-                <div class="newsletter-content">
-                    <h3>Stay Updated</h3>
-                    <p>Subscribe to our newsletter to receive the latest news and updates directly to your inbox.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2>Ready to Make a Difference?</h2>
+                        <p>Join us in our mission to empower people through innovation and inclusion. Together, we can create meaningful change.</p>
+                        <div class="cta-buttons">
+                            <a href="get-involved.html" class="btn btn-secondary">Get Involved <i class="fas fa-hands-helping"></i></a>
+                            <a href="contact.html" class="btn" style="background-color: white; color: var(--science-blue);">Contact Us <i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -165,18 +168,6 @@
     <!-- Load JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        // Load header and footer
-        $(function(){
-            $("#header-placeholder").load("../components/header.html");
-            $("#footer-placeholder").load("../components/footer.html");
-        });
-        
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-    </script>
+    <script src="../../public/assets/js/news.js"></script>
 </body>
 </html>
