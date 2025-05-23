@@ -1,53 +1,192 @@
 /* youTHrive Malta - Our Work Page Styles */
 
 /* Hero section */
-.page-header {
-    padding: 180px 0 100px;
-    margin-top: 80px;
-    background: linear-gradient(rgba(5, 116, 220, 0.9), rgba(252, 133, 31, 0.8));
-    color: var(--text-light);
-    text-align: center;
-}
-
-.about-hero {
+.hero {
     background: linear-gradient(rgba(5, 116, 220, 0.8), rgba(252, 133, 31, 0.7)), url('../../../public/images/backgrounds/hero-background.jpg'), var(--science-blue);
     background-size: cover;
     background-position: center;
-    height: 60vh;
+    min-height: 80vh;
     position: relative;
     display: flex;
     align-items: center;
     margin-top: 0;
-    padding-top: 80px;
+    padding: 120px 0 80px;
+    color: white;
+    text-align: center;
     overflow: hidden;
 }
 
-.about-hero-content {
-    max-width: 800px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    padding: 40px;
-    color: white;
-    animation: fadeIn 1s ease-in-out;
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
     position: relative;
-    z-index: 5;
+    z-index: 2;
 }
 
-.about-hero h1 {
-    font-size: 3.5rem;
+.hero h1 {
+    font-size: 4rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.about-hero p {
-    font-size: 1.4rem;
+.hero p {
+    font-size: 1.5rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    font-weight: 300;
-    text-align: justify;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Impact Stats */
+.impact-stats {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--science-blue);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Mission Section */
+.mission {
+    padding: 80px 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.mission::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(5, 116, 220, 0.05);
+    top: -150px;
+    right: -100px;
+    z-index: 0;
+}
+
+.mission-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.mission h2 {
+    color: var(--science-blue);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.mission h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: var(--ecstasy);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mission p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Why It Matters Section */
+.why-matters {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: var(--science-blue);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.feature-card h3 {
+    color: var(--science-blue);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* Quick Links Styles */
