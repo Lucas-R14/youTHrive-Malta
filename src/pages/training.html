@@ -126,7 +126,7 @@
       .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
       });
-    AOS.init();
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: false });
     </script>
 </body>
 </html>
