@@ -112,5 +112,12 @@
     <div id="footer-placeholder"></div>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/projects.js"></script>
+    <script>
+    fetch('../components/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+    </script>
 </body>
 </html>
