@@ -11,12 +11,13 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <div id="header-placeholder"></div>
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-up">
                 <h1>Our Projects: Empowering Change Through Collaboration</h1>
                 <p>Discover our ongoing and past initiatives that drive innovation, inclusion, and positive impact in Malta and beyond.</p>
             </div>
@@ -26,12 +27,12 @@
         <!-- Current Projects Section -->
         <section class="projects-section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-aos="fade-up">
                     <h2>Current Projects</h2>
                     <p>Discover our ongoing initiatives that are making a difference in education and empowerment</p>
                 </div>
                 <div class="quick-links-grid" style="justify-content: center; grid-template-columns: repeat(2, minmax(320px, 1fr)); max-width: 900px; margin: 0 auto; gap: 40px;">
-                    <div class="quick-link-card" style="min-height: 380px;">
+                    <div class="quick-link-card" style="min-height: 380px;" data-aos="fade-up" data-aos-delay="100">
                         <div class="quick-link-image">
                             <i class="fas fa-balance-scale" style="font-size: 4rem; color: #ffffff;"></i>
                         </div>
@@ -41,7 +42,7 @@
                             <a href="#" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
-                    <div class="quick-link-card" style="min-height: 380px;">
+                    <div class="quick-link-card" style="min-height: 380px;" data-aos="fade-up" data-aos-delay="200">
                         <div class="quick-link-image">
                             <i class="fas fa-person-dress"></i>
                         </div>
@@ -58,12 +59,12 @@
         <!-- Past Projects Section -->
         <section class="projects-section mission">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-aos="fade-up">
                     <h2>Past Projects</h2>
                     <p>Our legacy of impactful initiatives and successful collaborations</p>
                 </div>
                 <div class="quick-links-grid">
-                    <div class="quick-link-card">
+                    <div class="quick-link-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="quick-link-image">
                             <i class="fas fa-briefcase" style="font-size: 3rem; color: #ffffff;"></i>
                         </div>
@@ -80,19 +81,19 @@
         <!-- Project Highlights Section -->
         <section class="projects-section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-aos="fade-up">
                     <h2>Project Highlights</h2>
                     <p>Success stories and key outcomes from our initiatives</p>
                 </div>
                 <div class="quick-links-grid">
-                    <div class="quick-link-card">
+                    <div class="quick-link-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="quick-link-content">
                             <h3>MEA Annual Training Event 2024</h3>
                             <p>Led by Kevin Spiteri, this successful training event brought together industry leaders and professionals for knowledge sharing and development.</p>
                             <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
-                    <div class="quick-link-card">
+                    <div class="quick-link-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="quick-link-content">
                             <h3>Digital Skills Training</h3>
                             <p>Our innovative approach to digital skills training has helped numerous participants adapt to the evolving technological landscape.</p>
@@ -106,7 +107,7 @@
         <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
-                <div class="cta-content">
+                <div class="cta-content" data-aos="fade-up">
                     <h2>Join Our Mission</h2>
                     <p>Be part of our journey in creating positive change through education and empowerment</p>
                     <div class="cta-buttons">
@@ -120,6 +121,7 @@
     <div id="footer-placeholder"></div>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/projects.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
     fetch('../components/header.html')
       .then(response => response.text())
@@ -131,6 +133,7 @@
       .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
       });
+    AOS.init();
     </script>
 </body>
 </html>
