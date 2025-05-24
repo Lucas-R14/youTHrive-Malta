@@ -13,6 +13,14 @@
 </head>
 <body>
     <div id="header-placeholder"></div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Training & Resources: Unlock Your Potential</h1>
+                <p>Explore our innovative training opportunities, custom programs, and digital resources designed to empower individuals and organizations.</p>
+            </div>
+        </div>
+    </section>
     <main>
         <section class="projects-section">
             <div class="container">
@@ -110,6 +118,11 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
+      });
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
       });
     </script>
 </body>
