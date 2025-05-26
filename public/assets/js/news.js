@@ -1,7 +1,8 @@
 // Initialize AOS (Animate On Scroll) library
 AOS.init({
     duration: 800,
-    once: true
+    once: true,
+    easing: 'ease-in-out'
 });
 
 // Load header and footer components
@@ -18,4 +19,20 @@ $(document).ready(function() {
     
     // Load footer
     $("#footer-placeholder").load("../components/footer.html");
+
+    // News grid animations
+    const grid = document.querySelector('.quick-links-grid');
+    if (grid) {
+        setTimeout(() => {
+            grid.classList.add('visible');
+            
+            // Add 'visible' class to each card with a staggered delay
+            const cards = document.querySelectorAll('.quick-link-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 200); // 200ms delay between each card
+            });
+        }, 300); // Initial delay before starting animations
+    }
 });
