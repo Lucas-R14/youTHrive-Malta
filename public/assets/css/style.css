@@ -314,6 +314,11 @@ footer {
   margin-top: 30px;
 }
 
+.cta-buttons .btn {
+  background-color: white;
+  color: var(--science-blue);
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .header-container {

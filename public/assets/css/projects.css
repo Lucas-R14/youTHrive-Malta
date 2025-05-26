@@ -1,0 +1,145 @@
+/* Projects Page Specific Styles */
+
+.projects-section {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.projects-section:nth-child(even) {
+    background-color: var(--geyser);
+}
+
+.projects-section .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.projects-section .section-title h2 {
+    font-size: 2.5rem;
+    color: var(--science-blue);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.projects-section .section-title h2::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: var(--ecstasy);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.projects-section .section-title p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.quick-link-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.quick-link-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.quick-link-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.quick-link-card:hover .quick-link-image img {
+    transform: scale(1.1);
+}
+
+.quick-link-content {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-link-content h3 {
+    font-size: 1.5rem;
+    color: var(--science-blue);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.quick-link-card:hover .quick-link-content h3 {
+    color: var(--ecstasy);
+}
+
+.quick-link-content p {
+    margin-bottom: 25px;
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.quick-link-content .btn {
+    align-self: flex-start;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+.quick-link-image i {
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .projects-section {
+        padding: 60px 0;
+    }
+
+    .projects-section .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .quick-link-image {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-section {
+        padding: 40px 0;
+    }
+
+    .projects-section .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .quick-link-content {
+        padding: 20px;
+    }
+
+    .quick-link-content h3 {
+        font-size: 1.3rem;
+    }
+} 

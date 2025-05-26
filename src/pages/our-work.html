@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Work - youTHrive Malta</title>
+    <link rel="stylesheet" href="../../public/assets/css/our-work.css">
     <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -15,17 +20,56 @@
         <div class="container">
             <div class="hero-content" data-aos="fade-up">
                 <h1>Our Work</h1>
-                <p>Empowering individuals and communities through innovative learning experiences and inclusive programs that drive positive change.</p>
+                <p>Transforming lives through innovative learning experiences and inclusive programs that drive positive change in communities across Malta and beyond.</p>
+                <div class="hero-buttons">
+                    <a href="#focus-areas" class="btn btn-primary">Explore Our Programs <i class="fas fa-arrow-down"></i></a>
+                    <a href="get-involved.html" class="btn btn-secondary">Get Involved <i class="fas fa-hands-helping"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Impact Stats -->
+    <section class="impact-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Individuals Trained</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Programs Delivered</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Community Partners</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Approach -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content" data-aos="fade-up">
+                <h2>Our Approach to Empowerment</h2>
+                <p>At youTHrive Malta, we believe in a holistic approach to personal and professional development. Our programs are designed to be engaging, practical, and transformative, combining cutting-edge methodologies with real-world applications.</p>
+                <p>We focus on creating inclusive learning environments that cater to diverse needs, ensuring that every participant can thrive regardless of their background or starting point. Our innovative techniques, including gamification and interactive media, make learning both effective and enjoyable.</p>
             </div>
         </div>
     </section>
     
     <!-- Work Areas Section -->
-    <section class="section-padding bg-light">
+    <section id="focus-areas" class="section-padding bg-light">
         <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-title text-center" data-aos="fade-up">
                 <h2>Our Focus Areas</h2>
-                <p class="lead">Discover how we're making a difference through our comprehensive range of programs and initiatives.</p>
+                <p>Discover how we're making a difference through our comprehensive range of programs and initiatives.</p>
             </div>
             
             <div class="quick-links-grid">
@@ -37,7 +81,7 @@
                     <div class="quick-link-content">
                         <h3>Digital Skills & Emerging Technologies</h3>
                         <p>Equipping individuals with essential digital competencies and knowledge of cutting-edge technologies for the modern workforce.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <a href="#" class="btn btn-primary">Learn More<i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -128,15 +172,47 @@
         </div>
     </section>
     
+    <!-- Why It Matters Section -->
+    <section class="why-matters">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Why Our Work Matters</h2>
+                <p>Creating lasting impact through targeted programs and initiatives</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education for All</h3>
+                    <p>Breaking down barriers to education and creating equal opportunities for everyone to learn and grow.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Career Development</h3>
+                    <p>Equipping individuals with the skills needed to thrive in today's competitive job market.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Building</h3>
+                    <p>Fostering strong, supportive communities where everyone can contribute and succeed.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>Pioneering new approaches to learning and personal development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content" data-aos="fade-up">
                 <h2>Ready to Make a Difference?</h2>
-                <p>Join us in our mission to empower individuals and communities through innovative learning and development programs.</p>
+                <p>Join us in our mission to empower individuals and communities through innovative learning and development programs. Whether you're looking to participate in our programs, volunteer, or partner with us, your support helps create lasting change.</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-                    <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+                    <a href="get-involved.html" class="btn btn-secondary">Get Involved <i class="fas fa-hands-helping"></i></a>
+                    <a href="contact.html" class="btn">Contact Us <i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -146,38 +222,7 @@
     <div id="footer-placeholder"></div>
     
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-        
-        // Include header and footer
-        function includeHTML() {
-            // Include header
-            const headerPlaceholder = document.getElementById('header-placeholder');
-            if (headerPlaceholder) {
-                fetch('../components/header.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        headerPlaceholder.innerHTML = data;
-                    });
-            }
-            
-            // Include footer
-            const footerPlaceholder = document.getElementById('footer-placeholder');
-            if (footerPlaceholder) {
-                fetch('../components/footer.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        footerPlaceholder.innerHTML = data;
-                    });
-            }
-        }
-        
-        document.addEventListener('DOMContentLoaded', includeHTML);
-    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../public/assets/js/our-work.js"></script>
 </body>
 </html>
