@@ -143,7 +143,7 @@
     font-size: 1.1rem;
 }
 
-.quick-links-grid {
+.quick-links-grid { 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
@@ -166,7 +166,7 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.quick-link-image {
+.quick-link-image { /* . */
     height: 180px;
     background-color: var(--science-blue);
     display: flex;
@@ -181,7 +181,7 @@
     background-color: var(--ecstasy);
 }
 
-.quick-link-content {
+.quick-link-content {  /* . */
     padding: 30px;
     flex-grow: 1;
     display: flex;
