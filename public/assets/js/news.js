@@ -8,7 +8,7 @@ AOS.init({
 // Load header and footer components
 $(document).ready(function() {
     // Load header
-    $("#header-placeholder").load("../components/header.html", function() {
+    $("#header-placeholder").load("../../src/components/header.html", function() {
         // Add active class to current page in navigation
         $("nav ul li a").each(function() {
             if ($(this).attr("href") === "news.html") {
@@ -18,7 +18,7 @@ $(document).ready(function() {
     });
     
     // Load footer
-    $("#footer-placeholder").load("../components/footer.html");
+    $("#footer-placeholder").load("../../src/components/footer.html");
 
     // News grid animations
     const grid = document.querySelector('.quick-links-grid');
