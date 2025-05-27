@@ -1,6 +1,4 @@
-/* youTHrive Malta - Get Involved Page Stylesheet */
 
-/* Hero section - matching main site gradient */
 .get-involved-hero {
     background: linear-gradient(rgba(5, 116, 220, 0.8), rgba(252, 133, 31, 0.8)), var(--science-blue);
     background-size: cover;
@@ -11,13 +9,8 @@
     color: var(--text-light);
     position: relative;
     padding-top: 80px;
-    margin-bottom: -100px; /* Back to original overlap */
-    z-index: 10; /* High z-index to be on top */
-}
-
-/* Ensure header stays on top but hero content is visible */
-header {
-    z-index: 1000 !important;
+    margin-bottom: -100px;
+    z-index: 10;
 }
 
 .get-involved-hero-content {
@@ -27,7 +20,7 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
     position: relative;
-    z-index: 11; /* Above everything except header */
+    z-index: 11;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
@@ -52,6 +45,7 @@ header {
     font-weight: 500;
 }
 
+/* Partner Types */
 .partner-types {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -84,6 +78,7 @@ header {
     color: var(--chardonnay);
 }
 
+/* CTA Buttons */
 .cta-buttons {
     display: flex;
     gap: 20px;
@@ -101,10 +96,10 @@ header {
 
 /* Collaboration section */
 .collaboration-section {
-    padding: 150px 0 100px 0; /* Back to original padding */
+    padding: 150px 0 100px 0;
     background: linear-gradient(135deg, var(--geyser) 0%, #ffffff 100%);
     position: relative;
-    z-index: 1; /* Below hero */
+    z-index: 1;
 }
 
 .quick-links-grid {
@@ -114,9 +109,9 @@ header {
     margin-top: 60px;
 }
 
-/* Fix card background color to match other pages */
+/* Card Styling */
 .collaboration-section .quick-link-image {
-    background-color: #0574dc !important; /* Darker blue from main site */
+    background-color: #0574dc !important;
     transition: all 0.3s ease !important;
 }
 
@@ -124,7 +119,7 @@ header {
     transition: all 0.3s ease !important;
 }
 
-/* Add hover effect specifically for this page with smooth transitions */
+/* Card Hover Effects */
 .collaboration-section .quick-link-card:hover .quick-link-image {
     background-color: var(--ecstasy) !important;
     transform: scale(1.05);
@@ -134,8 +129,47 @@ header {
     color: var(--ecstasy) !important;
 }
 
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.section-title h2 {
+    color: var(--science-blue);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: var(--ecstasy);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.projects-section {
+    padding: 80px 0;
+}
+
 /* Responsive design */
 @media screen and (max-width: 768px) {
+    /* Hero Section */
     .get-involved-hero {
         height: 70vh;
         padding-top: 100px;
@@ -146,18 +180,50 @@ header {
         margin: 0 15px;
     }
     
-    .get-involved-hero h1 { font-size: 2.5rem; }
-    .hero-subtitle { font-size: 1.2rem; }
-    .partner-types { grid-template-columns: 1fr; }
-    .cta-buttons { flex-direction: column; align-items: center; }
-    .cta-buttons .btn { width: 100%; max-width: 300px; }
-    .collaboration-grid { grid-template-columns: 1fr; }
-    .info-highlights { grid-template-columns: 1fr; }
+    .get-involved-hero h1 { 
+        font-size: 2.5rem; 
+    }
+    
+    .hero-subtitle { 
+        font-size: 1.2rem; 
+    }
+    
+    /* Layout Adjustments */
+    .partner-types { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .cta-buttons { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .cta-buttons .btn { 
+        width: 100%; 
+        max-width: 300px; 
+    }
+    
+    .collaboration-grid, 
+    .info-highlights { 
+        grid-template-columns: 1fr; 
+    }
 }
 
+/* Mobile Devices */
 @media screen and (max-width: 480px) {
-    .get-involved-hero h1 { font-size: 2rem; }
-    .collaboration-section { padding: 60px 0; }
-    .card-content { padding: 30px 20px 25px 20px; }
-    .info-section { padding: 60px 0; }
+    .get-involved-hero h1 { 
+        font-size: 2rem; 
+    }
+    
+    .collaboration-section { 
+        padding: 60px 0; 
+    }
+    
+    .card-content { 
+        padding: 30px 20px 25px 20px; 
+    }
+    
+    .info-section { 
+        padding: 60px 0; 
+    }
 }
