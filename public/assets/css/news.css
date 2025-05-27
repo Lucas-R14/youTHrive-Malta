@@ -537,6 +537,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .quick-link-card:hover {
@@ -577,7 +578,7 @@ body {
 }
 
 .quick-link-content {
-    padding: 0;
+    padding: 25px 25px 30px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -588,13 +589,18 @@ body {
     color: var(--science-blue);
     font-size: 1.4rem;
     transition: color 0.3s ease;
+    line-height: 1.4;
+    min-height: 3.5em; /* Ensures consistent height for two lines of text */
+    display: flex;
+    align-items: center;
 }
 
 .quick-link-content p {
     color: #555;
-    margin-bottom: 20px;
-    line-height: 1.6;
+    margin: 0 0 25px 0;
+    line-height: 1.7;
     flex-grow: 1;
+    font-size: 1rem;
 }
 
 .article-meta {
@@ -610,6 +616,7 @@ body {
     padding: 12px 25px;
     border-radius: 50px;
     transition: all 0.3s ease;
+    margin-bottom: 5px;
 }
 
 /* Articles Section */
