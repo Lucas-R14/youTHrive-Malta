@@ -17,8 +17,6 @@
     --transition: all 0.3s ease;
 }
 
-/* Base Styles
-   ========================================================================== */
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
@@ -26,8 +24,6 @@ body {
     background-color: #f9fafc;
 }
 
-/* Hero Section
-   ========================================================================== */
 .hero {
     background: linear-gradient(rgba(5, 116, 220, 0.8), rgba(252, 133, 31, 0.7)), 
                 url('../../../public/images/backgrounds/hero-background.jpg');
@@ -72,8 +68,6 @@ body {
     margin: 0 auto 30px;
 }
 
-/* Section Title
-   ========================================================================== */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -87,6 +81,7 @@ body {
     position: relative;
     display: inline-block;
     padding-bottom: 15px;
+    margin-top: 50px;
 }
 
 .section-title h2::after {
@@ -109,8 +104,6 @@ body {
     color: var(--text-secondary);
 }
 
-/* Animations
-   ========================================================================== */
 @keyframes fadeIn {
     from { 
         opacity: 0; 
@@ -141,86 +134,122 @@ body {
 
 /* News Grid
    ========================================================================== */
-
-
-/* News Grid
-   ========================================================================== */
 .quick-links-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
-    margin-bottom: 80px;
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-    animation-delay: 0.3s;
+    margin: 40px 0 60px;
 }
 
-.quick-links-grid.visible {
-    opacity: 1;
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-/* News Card
-   ========================================================================== */
 .quick-link-card {
-    background: var(--white);
+    background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
     flex-direction: column;
     height: 100%;
-    border: 1px solid var(--border-color);
-    padding: 30px;
-    opacity: 0;
-    transform: translateY(20px);
-    border-top: 4px solid var(--science-blue);
-    animation: fadeIn 0.6s ease-out forwards;
+    border: 1px solid #e1e8ed;
+    position: relative;
+    overflow: hidden;
 }
 
-.quick-link-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Staggered animation delays for cards */
-.quick-link-card:nth-child(1) { animation-delay: 0.4s; }
-.quick-link-card:nth-child(2) { animation-delay: 0.6s; }
-.quick-link-card:nth-child(3) { animation-delay: 0.8s; }
-
-/* Card Hover Effect */
 .quick-link-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-    border-top-color: var(--ecstasy);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* Card Icon */
 .quick-link-icon {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    background: rgba(5, 116, 220, 0.1);
-    border-radius: 50%;
+    background-color: var(--science-blue);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 3rem;
+    min-height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
-    font-size: 32px;
-    color: var(--science-blue);
-    transition: var(--transition);
+    margin: 0;
+    transition: all 0.3s ease;
 }
 
-.quick-link-card:hover .quick-link-icon {
-    background: var(--ecstasy);
-    color: var(--white);
+/* Make all card headers blue */
+.quick-link-card .quick-link-icon {
+    background-color: var(--science-blue) !important;
 }
 
-/* Card Content */
 .quick-link-content {
+    padding: 40px 30px 30px;
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
+}
+
+.quick-link-card:hover .quick-link-icon {
+    transform: scale(1.05);
+}
+
+.quick-link-content h3 {
+    color: var(--science-blue);
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.quick-link-card:hover .quick-link-content h3 {
+    color: var(--ecstasy);
+}
+
+.article-meta {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.article-meta i {
+    margin-right: 5px;
+    color: var(--ecstasy);
+}
+
+.quick-link-content p {
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.quick-link-content .btn {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.quick-link-content .btn i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.quick-link-card:hover .btn i {
+    transform: translateX(5px);
 }
 
 .quick-link-content h3 {
@@ -262,8 +291,6 @@ body {
     box-shadow: var(--shadow-sm);
 }
 
-/* Responsive Adjustments
-   ========================================================================== */
 @media (max-width: 992px) {
     .quick-links-grid {
         grid-template-columns: repeat(2, 1fr);
