@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Load header
-    fetch('../components/header.html')
+    fetch('../../src/components/header.html')
         .then(response => response.text())
         .then(data => {
             const headerPlaceholder = document.getElementById('header-placeholder');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     // Load footer
-    fetch('../components/footer.html')
+    fetch('../../src/components/footer.html')
         .then(response => response.text())
         .then(data => {
             const footerPlaceholder = document.getElementById('footer-placeholder');
