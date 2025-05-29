@@ -1,142 +1,97 @@
-   :root {
-    --science-blue: #0574dc;
-    --ecstasy: #fc851f;
-    --white: #ffffff;
-    --text-color: #333333;
-    --text-secondary: #666666;
-    --border-color: #e1e8ed;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 5px 25px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.12);
-    --transition: all 0.3s ease;
-}
+/* News Page Styles */
 
+/* Base Styles */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--text-dark);
     background-color: #f9fafc;
 }
 
+/* Hero Section */
 .hero {
-    background: linear-gradient(rgba(5, 116, 220, 0.8), rgba(252, 133, 31, 0.7));
+    background: linear-gradient(rgba(5, 116, 220, 0.8), rgba(252, 133, 31, 0.8));
     background-size: cover;
     background-position: center;
-    min-height: 80vh;
+    height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 120px 0 80px;
-    color: var(--white);
-    text-align: center;
+    color: var(--text-light);
     position: relative;
-    overflow: hidden;
+    padding-top: 80px;
 }
 
 .hero-content {
     max-width: 800px;
-    padding: 40px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 5;
-    animation: fadeIn 1s ease-in-out;
+    padding: 40px 20px;
+    box-shadow: 0 8px 32px rgba(5, 116, 220, 0.08);
+    text-align: center;
 }
 
 .hero h1 {
     font-size: 3.5rem;
+    margin-bottom: 1.5rem;
     font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-shadow: 2px 2px 8px rgba(5, 116, 220, 0.1);
 }
 
 .hero p {
-    font-size: 1.4rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    font-weight: 300;
-    max-width: 600px;
-    margin: 0 auto 30px;
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    color: white;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Section Title */
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
 }
 
 .section-title h2 {
     color: var(--science-blue);
     font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 15px;
+    margin-top: 80px;
+    margin-bottom: 1rem;
     position: relative;
     display: inline-block;
-    padding-bottom: 15px;
-    margin-top: 50px;
 }
 
 .section-title h2::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 80px;
     height: 4px;
     background-color: var(--ecstasy);
-    bottom: 0;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 2px;
 }
 
 .section-title p {
-    font-size: 1.25rem;
-    font-weight: 300;
+    color: #666;
+    font-size: 1.1rem;
     max-width: 800px;
-    margin: 0 auto 2rem;
-    color: var(--text-secondary);
+    margin: 0 auto;
 }
 
-@keyframes fadeIn {
-    from { 
-        opacity: 0; 
-        transform: translateY(20px); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    }
-}
-
-@keyframes bounceIn {
-    0% { 
-        opacity: 0; 
-        transform: scale(0.3); 
-    }
-    50% { 
-        opacity: 1; 
-        transform: scale(1.05); 
-    }
-    70% { 
-        transform: scale(0.9); 
-    }
-    100% { 
-        transform: scale(1); 
-    }
-}
-
+/* Quick Links Grid */
 .quick-links-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
     margin: 40px 0 60px;
-}
-
-.quick-links-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
 }
 
 .quick-link-card {
@@ -149,8 +104,6 @@ body {
     flex-direction: column;
     height: 100%;
     border: 1px solid #e1e8ed;
-    position: relative;
-    overflow: hidden;
 }
 
 .quick-link-card:hover {
@@ -168,31 +121,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
     transition: all 0.3s ease;
 }
 
-/* Make all card headers blue */
-.quick-link-card .quick-link-icon {
-    background-color: var(--science-blue) !important;
-}
-
 .quick-link-content {
-    padding: 40px 30px 30px;
+    padding: 30px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-}
-
-.quick-link-card:hover .quick-link-icon {
-    transform: scale(1.05);
 }
 
 .quick-link-content h3 {
     color: var(--science-blue);
     font-size: 1.5rem;
-    margin: 0 0 15px 0;
+    margin: 0 0 15px;
     line-height: 1.4;
     font-weight: 700;
     transition: color 0.3s ease;
@@ -200,6 +142,10 @@ body {
 
 .quick-link-card:hover .quick-link-content h3 {
     color: var(--ecstasy);
+}
+
+.quick-link-card:hover .quick-link-icon {
+    transform: scale(1.05);
 }
 
 .article-meta {
@@ -461,26 +407,36 @@ body {
     transform: translateX(3px);
 }
 
+/* Buttons */
 .btn-primary {
     background-color: var(--science-blue);
-    color: white;
+    color: white !important;
     border-color: var(--science-blue);
 }
 
 .btn-primary:hover {
     background-color: transparent;
-    color: var(--science-blue);
+    color: var(--science-blue) !important;
 }
 
 .btn-outline-light {
-    background-color: Orange    ;
-    color: white;
-    border-color:orange
+    background-color: orange;
+    color: white !important;
+    border-color: orange;
 }
 
 .btn-outline-light:hover {
     background-color: transparent;
-    color: orange;
+    color: orange !important;
+}
+
+/* Ensure buttons in news section have white text */
+#news .btn {
+    color: white !important;
+}
+
+#news .btn:hover {
+    color: var(--science-blue) !important;
 }
 
 /* Hero Buttons */
