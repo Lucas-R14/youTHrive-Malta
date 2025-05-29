@@ -213,15 +213,13 @@
 }
 
 .quick-link-image {
-    background-color: #0574dc !important;
-    opacity: 1 !important;
-    filter: none !important;
-    height: 180px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--science-blue);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
-    color: white;
     transition: all 0.3s ease;
 }
 
