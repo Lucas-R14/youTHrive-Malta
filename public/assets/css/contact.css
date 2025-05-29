@@ -2,15 +2,17 @@
 
 /* Hero section */
 .contact-hero {
-    background: linear-gradient(rgba(5, 116, 220, 0.8), rgba(252, 133, 31, 0.7)), url('../../../public/images/backgrounds/hero-background.jpg'), var(--science-blue);
+    background: linear-gradient(rgba(5, 116, 220, 0.8), rgba(252, 133, 31, 0.7)), url('../../images/backgrounds/hero-background.jpg'), var(--science-blue);
     background-size: cover;
     background-position: center;
-    height: 50vh;
+    min-height: 90vh;
     position: relative;
     display: flex;
     align-items: center;
     margin-top: 0;
     padding-top: 80px;
+    color: white;
+    text-align: center;
     overflow: hidden;
 }
 
@@ -21,6 +23,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
     color: white;
+    margin: 0 auto;
     animation: fadeIn 1s ease-in-out;
     position: relative;
     z-index: 5;
@@ -120,7 +123,6 @@
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .form-group input:focus,
