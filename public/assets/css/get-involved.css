@@ -96,6 +96,32 @@
     border-radius: 50px;
     font-size: 1.1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .btn-primary {
+    background-color: var(--science-blue);
+    color: var(--text-light);
+    border: 2px solid var(--science-blue);
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .btn-primary:hover {
+    background-color: transparent;
+    color: var(--science-blue);
+}
+
+.cta-buttons .btn-secondary {
+    background-color: var(--ecstasy);
+    color: var(--text-light);
+    border: 2px solid var(--ecstasy);
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background-color: transparent;
+    color: var(--ecstasy);
 }
 
 /* Collaboration section */
