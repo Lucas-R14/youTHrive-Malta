@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     link.classList.add('active');
                 }
             });
+            attachMobileMenu();
         });
 
     fetch('../components/footer.html')
@@ -33,3 +34,22 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('footer-placeholder').innerHTML = data;
         });
 });
+
+function attachMobileMenu() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+        document.addEventListener('click', function(event) {
+            if (navMenu.classList.contains('active')) {
+                if (!navMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                }
+            }
+        });
+    }
+}

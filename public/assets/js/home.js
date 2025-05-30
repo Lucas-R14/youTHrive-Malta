@@ -1,19 +1,39 @@
 // Simple function to include HTML content
-function includeHTML(file, elementId) {
+function includeHTML(file, elementId, callback) {
     fetch(file)
         .then(response => response.text())
         .then(html => {
             document.getElementById(elementId).innerHTML = html;
+            if (callback) callback();
         })
         .catch(error => {
             console.error('Error loading the HTML file:', error);
         });
 }
 
+function attachMobileMenu() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+        document.addEventListener('click', function(event) {
+            if (navMenu.classList.contains('active')) {
+                if (!navMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                }
+            }
+        });
+    }
+}
+
 // Execute when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Include header and footer
-    includeHTML('../components/header.html', 'header-placeholder');
+    includeHTML('../components/header.html', 'header-placeholder', attachMobileMenu);
     includeHTML('../components/footer.html', 'footer-placeholder');
     
     // Initialize AOS animations
