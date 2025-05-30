@@ -4,6 +4,9 @@ function includeHTML(file, elementId) {
         .then(response => response.text())
         .then(html => {
             document.getElementById(elementId).innerHTML = html;
+            if (elementId === 'header-placeholder') {
+                attachMobileMenu();
+            }
         })
         .catch(error => {
             console.error('Error loading the HTML file:', error);
@@ -56,4 +59,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-}); 
+});
+
+function attachMobileMenu() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+        document.addEventListener('click', function(event) {
+            if (navMenu.classList.contains('active')) {
+                if (!navMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                }
+            }
+        });
+    }
+} 

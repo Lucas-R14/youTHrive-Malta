@@ -17,6 +17,14 @@ function attachMobileMenu() {
             navMenu.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
         });
+        document.addEventListener('click', function(event) {
+            if (navMenu.classList.contains('active')) {
+                if (!navMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                }
+            }
+        });
     }
 }
 document.addEventListener('DOMContentLoaded', function() {
